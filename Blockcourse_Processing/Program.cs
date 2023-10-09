@@ -1,3 +1,5 @@
+using Blockcourse_Processing.Core.Servies;
+using Blockcourse_Processing.Core.Servies.InterFace;
 using Blockcourse_Processing.DataLayer.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +14,9 @@ builder.Services.AddDbContext<TikTokDbContext>(options => options.UseSqlServer(c
 #endregion
 
 #region IOC
+builder.Services.AddTransient<ISpotifyServies,SpotifyServies>();    
+builder.Services.AddTransient<ITikTokServies,TikTokServies>();    
+builder.Services.AddTransient<IYouTubeServies,YouTubeServies>();    
 
 #endregion
 
