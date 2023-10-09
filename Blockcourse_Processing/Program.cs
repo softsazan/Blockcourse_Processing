@@ -1,11 +1,16 @@
+using Blockcourse_Processing.DataLayer.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 #region DbContext
-
+var connectionString = builder.Configuration.GetConnectionString("TikTolkConnection");
+builder.Services.AddDbContext<TikTokDbContext>(options => options.UseSqlServer(connectionString));
 #endregion
+
 #region IOC
 
 #endregion
