@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Blockcourse_Processing.DataLayer.Entities;
+﻿namespace Blockcourse_Processing.DataLayer.Entities;
 
 public partial class Permission
 {
